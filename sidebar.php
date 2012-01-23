@@ -5,4 +5,5 @@
 <div class="two-col">
 	<?php dynamic_sidebar('sidebar-section-c') ?>
 </div>
+<div class="clearfix"></div>
 <?php dynamic_sidebar('sidebar-section-d') ?>

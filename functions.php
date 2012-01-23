@@ -53,15 +53,33 @@ class Piratpartiet {
 
 		register_sidebar($args);
 
-		$args['name']        = "Sidospalt sektion C (mitten, höger)";
+		$args['name']        = "Sidospalt sektion C";
 		$args['id']          = 'sidebar-section-c';
 		$args['description'] = "Mitten av sidospalten, halv bredd, till höger";
 
 		register_sidebar($args);
 
-		$args['name']        = "Sidospalt sektion D (underst)";
+		$args['name']        = "Sidospalt sektion D";
 		$args['id']          = 'sidebar-section-d';
 		$args['description'] = "Underst i sidospalten, full bredd";
+
+		register_sidebar($args);
+
+		$args['name']        = "Sidfoten (vänster)";
+		$args['id']          = 'footer-section-a';
+		$args['description'] = "Vänstra delen av sidfoten";
+
+		register_sidebar($args);
+
+		$args['name']        = "Sidfoten (mitten)";
+		$args['id']          = 'footer-section-b';
+		$args['description'] = "Mellersta delen av sidfoten";
+
+		register_sidebar($args);
+
+		$args['name']        = "Sidfoten (höger)";
+		$args['id']          = 'footer-section-c';
+		$args['description'] = "Högra delen av sidfoten";
 
 		register_sidebar($args);
 	}
