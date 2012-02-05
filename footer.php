@@ -1,13 +1,8 @@
 		<footer id="footer">
-			<div>
-				<?php dynamic_sidebar('footer-section-a') ?>
-			</div>
-			<div>
-				<?php dynamic_sidebar('footer-section-b') ?>
-			</div>
-			<div>
-				<?php dynamic_sidebar('footer-section-c') ?>
-			</div>
+			<?php dynamic_sidebar('footer-section-a') ?>
+			<?php dynamic_sidebar('footer-section-b') ?>
+			<?php dynamic_sidebar('footer-section-c') ?>
+			<div class="clearfix"></div>
 		</footer>
 		</div> <!-- #container -->
 		<?php wp_footer(); ?>

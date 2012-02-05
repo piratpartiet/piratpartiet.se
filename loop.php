@@ -30,7 +30,9 @@
 		<footer>
 			<?php get_template_part( 'entry', 'footer' ) ?>
 		</footer>
-		
+
+		<?php get_template_part( 'entry', 'comments' ) ?>
+
 	</article>
-	
+
 <?php endwhile; endif; ?>

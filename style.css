@@ -124,7 +124,7 @@ body {
 	padding: 0 20px;
 }
 #content, .sidebar {
-	border-top: solid 1px #aaa;
+	border-top: solid 1px #ccc;
 }
 
 /**
@@ -281,12 +281,12 @@ hgroup h2 {
  * Article styles
  */
 
-article {
+article.post {
 	margin-bottom: 20px;
 	padding-bottom: 10px;
-	border-bottom: solid 1px #aaa;
+	border-bottom: solid 1px #ccc;
 }
-article:last-of-type, article.sticky {
+article.post:last-of-type, article.sticky {
 	border-bottom: none;
 }
 
@@ -314,7 +314,7 @@ article .entry-meta {
 
 /** Footer styles **/
 article footer {
-	padding-top: 10px;
+	padding-top: 20px;
 	clear: left;
 	font-weight: bold;
 	font-size: 12px;
@@ -323,6 +323,15 @@ article footer a, article footer a:visited {
 	color: #222;
 	text-decoration: none;
 	font-size: 12px;
+}
+
+/** Social styles **/
+article .social {
+	float: right;
+}
+.tweetmeme_button, .pusha-button {
+	display: inline-block;
+	vertical-align: top;
 }
 
 /** Content styles **/
@@ -354,14 +363,15 @@ aside.sidebar section {
 	font-size: 0.9em;
 	line-height: 1.5em;
 	background-color: #9e9e9e;
-
-	display: -webkit-flexbox;
-	display: -moz-flexbox;
-	display: flexbox;
 }
-#footer > div {
+#footer section {
 	width: 33%;
+	float: left;
 	border-right: solid 1px #aaa;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .no-flexbox #footer > div {
 	float: left;
@@ -399,9 +409,9 @@ aside.sidebar section {
 	padding: 2px;
 	border: solid 1px #ccc;
 
-	-webkit-box-shadow: 0 0 2px #000;
-	-moz-box-shadow: 0 0 2px #000;
-	box-shadow: 0 0 2px #000;
+	-webkit-box-shadow: inset 0 0 4px #ddd;
+	-moz-box-shadow: inset 0 0 4px #ddd;
+	box-shadow: inset 0 0 4px #ddd;
 }
 .csstransitions #s {
 	width: 110px;
@@ -417,6 +427,67 @@ aside.sidebar section {
 .no-csstransitions #s, .no-js #s {
 	width: 200px;
 }
+
+/**
+ * Comments style
+ */
+
+.comments-wrapper {
+	margin-top: 60px;
+}
+
+.comments-wrapper article article {
+	margin-left: 40px;
+}
+
+.comments-wrapper article {
+	margin: 20px 0 40px 0;
+}
+
+.comment-reply-link, #commentform .form-submit input {
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#c8b7e3), to(#baa9d1));
+	background: -moz-linear-gradient(top, #c8b7e3, #baa9d1);
+
+	border: solid 1px #E9E9E9;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	padding: 3px 15px;
+	display: inline-block;
+
+	-webkit-box-shadow: 0 1px 1px 0px #eee;
+	-moz-box-shadow: 0 1px 1px 0px #eee;
+	box-shadow: 0 1px 1px 0px #eee;
+
+	text-shadow: 0px 1px 0px #ccc;
+	color: #000;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.comment-reply-link:hover {
+	color: #222;
+}
+#respond {
+	margin-top: 30px;
+}
+#commentform label {
+	width: 100px;
+	display: block;
+	float: left;
+}
+#commentform input, #commentform textarea {
+	border: solid 1px #CCC;
+
+	-webkit-box-shadow: inset 0 0 4px #ddd;
+	-moz-box-shadow: inset 0 0 4px #ddd;
+	box-shadow: inset 0 0 4px #ddd;
+}
+
+
 
 
 /* ==|== non-semantic helper classes ======================================== */

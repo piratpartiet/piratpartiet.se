@@ -6,4 +6,4 @@
 		</time>
 	</span> |
 	<?php comments_number( __('inga kommentarer', 'piratpartiet'), __('en kommentar', 'piratpartiet'), __('% kommentarer', 'piratpartiet') ) ?>
-] </div>
+ ] </div>
