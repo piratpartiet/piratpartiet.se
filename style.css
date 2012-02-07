@@ -505,6 +505,13 @@ aside.sidebar section {
 }
 
 
+/**
+ * Pagnation
+ **/
+
+.nav-num-current {
+	font-weight: bolder;
+}
 
 
 /* ==|== non-semantic helper classes ======================================== */

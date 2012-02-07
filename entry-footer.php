@@ -26,7 +26,6 @@
 	</div>
 	<?php
 		wp_enqueue_script('flattr');
-		wp_enqueue_script('facebook');
 		wp_enqueue_script('gplusone');
 	?>
 <?php endif ?>

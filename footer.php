@@ -5,6 +5,7 @@
 			<div class="clearfix"></div>
 		</footer>
 		</div> <!-- #container -->
+		<?php wp_enqueue_script('facebook'); ?>
 		<?php wp_footer(); ?>
 		<!--[if lt IE 7 ]>
 			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
