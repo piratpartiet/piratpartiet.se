@@ -355,6 +355,44 @@ aside.sidebar section {
 	margin-bottom: 20px;
 }
 
+/** List styles **/
+aside.sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+aside.sidebar li {
+	padding: 5px;
+	text-indent: 17px;
+}
+aside.sidebar li:before {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background-color: #86B92B;
+	content: "";
+	margin-left: -14px;
+	margin-top: 3px;
+}
+aside.sidebar li:nth-of-type(2n+1) {
+	background-color: #dadad9;
+}
+
+/** Typography **/
+aside.sidebar {
+	font-size: 11px;
+}
+aside.sidebar h1 {
+	font-size: 14px;
+}
+aside.sidebar a {
+	color: #222;
+	text-decoration: none;
+}
+aside.sidebar a:hover {
+	text-decoration: underline;
+}
+
 /**
  * Footer styles
  */
