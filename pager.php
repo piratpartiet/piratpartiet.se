@@ -15,34 +15,35 @@ if ( $paged < 5 ) {
 }
 
 ?>
+<div class="pager">
+	<?php if ( $page_start > 1 ) : ?>
+		<span class="nav-first">
+			<a href="<?php echo get_pagenum_link(1) ?>">&larr; Första sidan</a>
+		</span>
+	<?php endif ?>
 
-<?php if ( $page_start > 1 ) : ?>
-	<span class="nav-first">
-		<a href="<?php echo get_pagenum_link(1) ?>">&larr; Första sidan</a>
-	</span>
-<?php endif ?>
+	<span class="nav-next"><?php previous_posts_link( 'Föregående sida' ); ?></span>
 
-<span class="nav-next"><?php previous_posts_link( 'Föregående sida' ); ?></span>
+	<?php for ($x = $page_start; $x < $page_end; $x++) : ?>
 
-<?php for ($x = $page_start; $x < $page_end; $x++) : ?>
+		<?php
+		$classes = array('nav-num', 'nav-num-' . $x);
 
-	<?php
-	$classes = array('nav-num', 'nav-num-' . $x);
+		if ( $paged > 0 && $paged == $x || $paged == 0 && $x == 1 )
+			$classes[] = 'nav-num-current';
+		?>
 
-	if ( $paged > 0 && $paged == $x || $paged == 0 && $x == 1 )
-		$classes[] = 'nav-num-current';
-	?>
+		<span class="<?php echo implode(" ", $classes) ?>">
+			<a href="<?php echo get_pagenum_link($x) ?>" title="Gå till sida <?php echo $x ?>"><?php echo $x ?></a>
+		</span>
 
-	<span class="<?php echo implode(" ", $classes) ?>">
-		<a href="<?php echo get_pagenum_link($x) ?>" title="Gå till sida <?php echo $x ?>"><?php echo $x ?></a>
-	</span>
+	<?php endfor ?>
 
-<?php endfor ?>
+	<span class="nav-previous"><?php next_posts_link( 'Nästa sida' ); ?></span>
 
-<span class="nav-previous"><?php next_posts_link( 'Nästa sida' ); ?></span>
-
-<?php if ( $page_end <= $wp_query->max_num_pages ) : ?>
-	<span class="nav-last">
-		<a href="<?php echo get_pagenum_link($wp_query->max_num_pages) ?>">Sista sidan &rarr;</a>
-	</span>
-<?php endif ?>
+	<?php if ( $page_end <= $wp_query->max_num_pages ) : ?>
+		<span class="nav-last">
+			<a href="<?php echo get_pagenum_link($wp_query->max_num_pages) ?>">Sista sidan &rarr;</a>
+		</span>
+	<?php endif ?>
+</div>

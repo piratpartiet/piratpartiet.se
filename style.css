@@ -280,7 +280,7 @@ hgroup h2 {
 
 article.post {
 	margin-bottom: 20px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	border-bottom: solid 1px #dadada;
 }
 article.post:last-of-type, article.sticky {
@@ -307,6 +307,9 @@ article h6 { font-size: 16px; }
 
 article .entry-meta {
 	margin-bottom: 1em;
+}
+article .entry-meta {
+	font-size: 11px;
 }
 
 /** Footer styles **/
@@ -550,7 +553,22 @@ aside.sidebar a:hover {
  **/
 
 .nav-num-current {
-	font-weight: bolder;
+	background-color: #97c037;
+}
+.pager {
+	background-color: #572B85;
+	padding: 2px 5px;
+	display: inline;
+	font-size: 14px;
+	text-align: center;
+}
+.pager a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.pager span {
+	padding: 2px;
 }
 
 
