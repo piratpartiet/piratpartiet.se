@@ -95,7 +95,7 @@ class Piratpartiet {
 
 			$protocol = isset($_SERVER['HTTPS']) ? "https" : "http";
 
-			wp_enqueue_style($this->plugin_name . '-style', get_bloginfo( 'stylesheet_directory') . "/style.css");
+			wp_enqueue_style($this->plugin_name . '-style', get_bloginfo( 'stylesheet_directory') . "/style.css", array(), 1);
 
 			wp_enqueue_script('modernizr',  get_bloginfo("stylesheet_directory") . "/js/libs/modernizr-2.0.6.min.js");
 			wp_enqueue_script($this->plugin_name . '-plugins', get_bloginfo("stylesheet_directory") . "/js/plugins.js", array('jquery'), false, true);
