@@ -280,7 +280,7 @@ hgroup h2 {
 
 article.post {
 	margin-bottom: 20px;
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 	border-bottom: solid 1px #dadada;
 }
 article.post:last-of-type, article.sticky {
@@ -314,7 +314,7 @@ article .entry-meta {
 
 /** Footer styles **/
 article footer {
-	padding-top: 20px;
+	padding-top: 5px;
 	clear: left;
 	font-weight: bold;
 	font-size: 12px;
@@ -559,7 +559,7 @@ aside.sidebar a:hover {
 	background-color: #572B85;
 	padding: 2px 5px;
 	display: inline;
-	font-size: 14px;
+	font-size: 12px;
 	text-align: center;
 }
 .pager a {
