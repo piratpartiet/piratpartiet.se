@@ -414,12 +414,11 @@ aside.sidebar a:hover {
 	padding: 10px 0;
 	font-size: 0.9em;
 	line-height: 1.5em;
-	background-color: #9e9e9e;
+	background-color: #f1f1f1;
 }
 #footer section {
 	width: 33%;
 	float: left;
-	border-right: solid 1px #aaa;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
