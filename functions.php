@@ -16,8 +16,12 @@ class Piratpartiet {
 
 		$this->custom_header_support();
 
-
 		add_filter('excerpt_more', array($this, 'excerpt_more'));
+		add_filter('excerpt_length', array($this, 'excerpt_length'), 999);
+	}
+
+	function excerpt_length( $length ) {
+		return 86;
 	}
 
 	function excerpt_more($more) {
