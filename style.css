@@ -178,10 +178,18 @@ a:hover {
 .two-col {
 	width: 50%;
 	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
 }
 .three-col {
 	width: 33%;
 	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
 }
 
 /**
@@ -353,6 +361,12 @@ article th {
 
 aside.sidebar section {
 	margin-bottom: 20px;
+}
+aside.sidebar .two-col:nth-of-type(2n) {
+	padding-right: 5px;
+}
+aside.sidebar .two-col:nth-of-type(2n+1) {
+	padding-left: 5px;
 }
 
 /** List styles **/
