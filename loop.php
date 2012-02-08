@@ -25,7 +25,12 @@
 				</figure>
 			<?php endif ?>
 
-			<?php the_content(); ?>
+			<?php if ( is_single() || is_page() ) : ?>
+				<?php the_content(); ?>
+			<?php else : ?>
+				<?php the_excerpt(); ?>
+			<?php endif ?>
+
 		</div>
 
 		<footer>
