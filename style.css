@@ -230,7 +230,7 @@ hgroup h2 {
 #header nav, #header .menu {
 	background-color: #97c037;
 	font-size: 14px;
-	height: 32px;
+	height: 28px;
 	overflow: hidden;
 }
 #header nav ul, #header .menu ul {
@@ -239,7 +239,7 @@ hgroup h2 {
 	padding: 0;
 }
 #header nav > ul > li, #header .menu > ul > li {
-	line-height: 32px;
+	line-height: 28px;
 	padding: 0 10px;
 	float: left;
 }
