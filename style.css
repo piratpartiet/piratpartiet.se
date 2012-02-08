@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /** Link styles **/ 
 a, a:visited {
-	color: #3f8500;
+	color: #97c037;
 }
 a:hover {
 	color: #666;
@@ -228,7 +228,7 @@ hgroup h2 {
  */
 
 #header nav, #header .menu {
-	background-color: #8BC750;
+	background-color: #97c037;
 	font-size: 14px;
 	height: 32px;
 	overflow: hidden;
@@ -372,7 +372,7 @@ aside.sidebar li:before {
 	position: absolute;
 	width: 8px;
 	height: 8px;
-	background-color: #86B92B;
+	background-color: #97c037;
 	content: "";
 	margin-left: -14px;
 	margin-top: 3px;
