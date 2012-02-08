@@ -12,8 +12,17 @@ class Piratpartiet {
 		add_action('init', array( $this, 'init_sidebars') );
 
 		add_theme_support('post-thumbnails');
+		set_post_thumbnail_size( 190, 190 );
 
 		$this->custom_header_support();
+
+
+		add_filter('excerpt_more', array($this, 'excerpt_more'));
+	}
+
+	function excerpt_more($more) {
+		global $post;
+		return '... <a href="'. get_permalink($post->ID) .'">Läs mer</a>';
 	}
 
 	function custom_header_support() {
