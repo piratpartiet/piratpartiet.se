@@ -19,6 +19,17 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 				
 		<?php wp_head(); ?>
+
+		<meta property="og:description" content="<?php bloginfo("description") ?>">
+		<meta property="og:locale" content="<?php echo str_replace("-", "_", get_bloginfo('language') ) ?>">
+		<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
+		<meta property="og:title" content="<?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?>">
+		<meta property="og:type" content="<?php echo is_home() || is_front_page() ? "website" : "article" ?>">
+		<meta property="og:image" content="<?php bloginfo("template_directory") ?>/images/apple-touch-icon-114x114.png">
+		<meta property="og:image:width" content="114">
+		<meta property="og:image:height" content="114">
+		<meta property="og:url" content="http<?php if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") echo 's' ?>://<?php echo $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI'] ?>">
+		<meta property="fb:admins" content=""> <?php //todo: changeme, use graph.facebook.com/username or /userid  ?>
 	</head>
 	<!--[if lt IE 7 ]> <body <?php body_class('ie6'); ?>> <![endif]-->
 	<!--[if IE 7 ]> <body <?php body_class('ie7'); ?>> <![endif]-->
