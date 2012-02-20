@@ -549,7 +549,7 @@ aside.sidebar a:hover {
 
 
 /**
- * Pagnation
+ * Pagination
  **/
 
 .nav-num-current {
@@ -569,6 +569,28 @@ aside.sidebar a:hover {
 
 .pager span {
 	padding: 2px;
+}
+
+/**
+ * Ettan
+ */
+
+.ettan-site-name {
+	background: #97C037;
+	float: right;
+	padding: 1px 15px;
+	border-right: solid 1px #dadada;
+	border-left: solid 1px #dadada;
+	border-bottom: solid 1px #dadada;
+	margin-top: -21px;
+	min-width: 80px;
+}
+.ettan-site-name a, .ettan-site-name a:visited, .ettan-site-name a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+article:first-of-type .ettan-site-name {
+	margin-top: -11px;
 }
 
 
