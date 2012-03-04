@@ -1,10 +1,10 @@
 <?php global $ettan; ?>
 
-<?php foreach ( $ettan->get_posts() as $post ) : ?>
+<?php foreach ( $ettan->get_posts( $honor_stickyness = true ) as $post ) : ?>
 
 	<?php $site = $ettan->get_site($post->ID); ?>
 
-	<article role="article" id="post-<?php echo $post->ID ?>" <?php echo $post->class ?>>
+	<article role="article" id="post-<?php echo $post->ID ?>" class="<?php echo $post->class ?>">
 		<header>
 			<div class="ettan-site-name">
 				<a href="<?php echo $site->url ?>"><?php echo $site->name ?></a>

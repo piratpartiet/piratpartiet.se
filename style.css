@@ -98,10 +98,6 @@ td { vertical-align: top; }
 	padding: 0 4px 5px;
 	margin: 0;
 }
-.sticky {
-	background: #f7f7f7;
-	padding: 10px;
-}
 .entry-content img, .wp-caption {
 	max-width: 100%;
 	width: auto;
@@ -282,9 +278,6 @@ article.post {
 	margin-bottom: 20px;
 	padding-bottom: 10px;
 	border-bottom: solid 1px #dadada;
-}
-article.post:last-of-type, article.sticky {
-	border-bottom: none;
 }
 
 /** Heading styles **/
