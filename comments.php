@@ -1,4 +1,4 @@
-<section class="comments-wrapper">
+<section id="comments" class="comments-wrapper">
 
 	<h1>Kommentarer</h1>
 

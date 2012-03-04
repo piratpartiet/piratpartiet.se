@@ -1,34 +1,99 @@
 <?php
+/**
+ * Piratpartied WordPress Theme
+ * @version 1.0
+ * @author Rickard Andersson <rickard@0x539.se>
+ */
 
-
+/**
+ * Main class for the theme
+ * @since 1.0
+ */
 class Piratpartiet {
 
+	/**
+	 * Theme name and directory name
+	 * @var string
+	 */
 	private $plugin_name = "piratpartiet";
 
+	/**
+	 * Initializes the theme functionality
+	 */
 	function __construct() {
 
+		// Initializing functions
 		add_action('init', array( $this, 'init_assets') );
 		add_action('init', array( $this, 'init_menus') );
 		add_action('init', array( $this, 'init_sidebars') );
 
+		// Enable post thumbnails and set the size to 190x190
 		add_theme_support('post-thumbnails');
 		set_post_thumbnail_size( 190, 190 );
 
+		// This theme has custom header support, this function will enable it
 		$this->custom_header_support();
 
+		// Change some excerpt settings
 		add_filter('excerpt_more', array($this, 'excerpt_more'));
 		add_filter('excerpt_length', array($this, 'excerpt_length'), 999);
+
+		// Filters for adding the featured image to the rss feed, only applies to sub-blogs. The main blog
+		// is fetching the content from RSS and the images are already included there.
+		if ( !class_exists('PP_Ettan')) {
+			add_filter('the_excerpt_rss', array($this, 'featured_image_rss') );
+			add_filter('the_content_feed', array($this, 'featured_image_rss') );
+		}
 	}
 
+	/**
+	 * Adds the featured image to the rss feed
+	 * @param $content
+	 * @return string
+	 * @since 1.0
+	 */
+	function featured_image_rss($content) {
+
+		global $post;
+
+		if ( has_post_thumbnail( $post->ID ) ) {
+
+			$thumbnail = '<figure class="alignleft">';
+			$thumbnail .= get_the_post_thumbnail( $post->ID, 'thumbnail' );
+			$thumbnail .= '</figure>';
+
+			$content = $thumbnail . $content;
+		}
+
+		return $content;
+	}
+
+	/**
+	 * Attached to the filter excerpt_length
+	 * @param $length
+	 * @return int
+	 * @since 1.0
+	 */
 	function excerpt_length( $length ) {
 		return 86;
 	}
 
+	/**
+	 * Attached to the filter excerpt_more
+	 * @param $more
+	 * @return string
+	 * @since 1.0
+	 */
 	function excerpt_more($more) {
 		global $post;
 		return '... <a href="'. get_permalink($post->ID) .'">Läs mer</a>';
 	}
 
+	/**
+	 * Adds custom header support for this theme
+	 * @since 1.0
+	 * @return void
+	 */
 	function custom_header_support() {
 
 		add_custom_image_header( array($this, 'custom_header_style'), null );
@@ -40,12 +105,22 @@ class Piratpartiet {
 		define('NO_HEADER_TEXT', true );
 	}
 
+	/**
+	 * Needed function for the custom header
+	 * @since 1.0
+	 * @return void
+	 */
 	function custom_header_style() {
 		?><style type="text/css">
 	        #banner { background-image: url(<?php header_image(); ?>); }
 	    </style><?php
 	}
 
+	/**
+	 * Initialize the sidebars
+	 * @since 1.0
+	 * @return void
+	 */
 	function init_sidebars() {
 
 		$args = array(
@@ -97,10 +172,20 @@ class Piratpartiet {
 		register_sidebar($args);
 	}
 
+	/**
+	 * Initialize the menus
+	 * @since 1.0
+	 * @return void
+	 */
 	function init_menus() {
 		register_nav_menu('main', __('PP Huvudmeny'));
 	}
 
+	/**
+	 * Initialize javascript and stylesheets
+	 * @since 1.0
+	 * @return void
+	 */
 	function init_assets() {
 
 		// Only enqueue files on the public part of the page
@@ -121,8 +206,15 @@ class Piratpartiet {
 	}
 }
 
+// Load the theme
 new Piratpartiet();
 
+/**
+ * Get the swedish month name
+ * @param int $month
+ * @return string
+ * @since 1.0
+ */
 function month_sv($month) {
 
 	$month = intval($month);
@@ -237,6 +329,13 @@ class Walker_Comment_HTML5 extends Walker_Comment {
 	}
 }
 
+/**
+ * Improved comment form
+ * @param array $args
+ * @param int $post_id
+ * @since 1.0
+ * @return void
+ */
 function pp_comment_form( $args = array(), $post_id = null ) {
 	global $id;
 
