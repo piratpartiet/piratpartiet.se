@@ -121,6 +121,7 @@ body {
 }
 #content, .sidebar {
 	border-top: solid 1px #dadada;
+	padding-top: 20px;
 }
 
 /**
@@ -155,7 +156,8 @@ a:hover {
 .wide-column {
 	width: 64%;
 	float: left;
-	padding: 10px 10px 10px 0;
+	padding: 10px 0 10px 0;
+	margin-right: 10px;;
 }
 .narrow-column {
 	width: 33%;
@@ -217,6 +219,7 @@ hgroup h2 {
 	display: block;
 	background: transparent url(images/rss-icon.png) no-repeat top left;
 	float: right;
+	margin-right: 10px;
 }
 
 /**
@@ -579,9 +582,6 @@ aside.sidebar a:hover {
 .ettan-site-name a, .ettan-site-name a:visited, .ettan-site-name a:visited {
 	color: #222;
 	text-decoration: none;
-}
-article:first-of-type .ettan-site-name {
-	margin-top: -11px;
 }
 
 
