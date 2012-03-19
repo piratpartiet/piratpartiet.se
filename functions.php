@@ -206,6 +206,24 @@ class Piratpartiet {
 			wp_enqueue_script($this->plugin_name . '-admin-script', get_bloginfo("stylesheet_directory") . '/js/admin-script.js', array('jquery') );
 		}
 	}
+
+	/**
+	 * Wrapper function for $wp_query->max_num_pages when using PP ettan
+	 * @static
+	 * @return int
+	 * @since 1.0
+	 */
+	static function get_max_num_pages() {
+		global $wp_query, $ettan;
+
+		$ppp = get_option('posts_per_page');
+
+		if ( class_exists('PP_Ettan') ) {
+			return intval( floor( count( $ettan->get_posts() ) / $ppp ) );
+		} else {
+			return $wp_query->max_num_pages;
+		}
+	}
 }
 
 // Load the theme
