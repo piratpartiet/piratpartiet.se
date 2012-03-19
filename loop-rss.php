@@ -4,7 +4,7 @@
 
 	<?php $site = $ettan->get_site($post->ID); ?>
 
-	<article role="article" id="post-<?php echo $post->ID ?>" class="<?php echo $post->class ?>">
+	<article role="article" id="post-<?php echo $post->ID ?>" class="ettan <?php echo $post->class ?>">
 		<header>
 			<div class="ettan-site-name">
 				<a href="<?php echo $site->url ?>"><?php echo $site->name ?></a>

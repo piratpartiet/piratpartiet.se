@@ -279,8 +279,12 @@ hgroup h2 {
 
 article.post {
 	margin-bottom: 20px;
-	padding-bottom: 10px;
+	padding-bottom: 50px;
 	border-bottom: solid 1px #dadada;
+}
+
+article.post.ettan .entry-title {
+	width: 480px;
 }
 
 /** Heading styles **/
@@ -313,12 +317,12 @@ article footer {
 	padding-top: 5px;
 	clear: left;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 11px;
 }
 article footer a, article footer a:visited {
 	color: #222;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 11px;
 }
 
 /** Social styles **/
