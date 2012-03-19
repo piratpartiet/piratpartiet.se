@@ -569,17 +569,15 @@ aside.sidebar a:hover {
  */
 
 .ettan-site-name {
-	background: #ec8b00;
+	background: #f1f1f1;
 	float: right;
 	padding: 1px 15px;
-	border-right: solid 1px #dadada;
-	border-left: solid 1px #dadada;
-	border-bottom: solid 1px #dadada;
+	border: solid 1px #dadada;
 	margin-top: -21px;
 	min-width: 80px;
 }
 .ettan-site-name a, .ettan-site-name a:visited, .ettan-site-name a:visited {
-	color: #fff;
+	color: #222;
 	text-decoration: none;
 }
 article:first-of-type .ettan-site-name {
