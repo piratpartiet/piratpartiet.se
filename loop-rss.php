@@ -1,6 +1,6 @@
 <?php global $ettan; ?>
 
-<?php foreach ( $ettan->get_posts( $honor_stickyness = true ) as $post ) : ?>
+<?php foreach ( $ettan->get_posts( $honor_stickyness = true, (isset($_GET['paged']) ? $_GET['paged'] : 1) ) as $post ) : ?>
 
 	<?php $site = $ettan->get_site($post->ID); ?>
 
