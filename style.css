@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /** Link styles **/ 
 a, a:visited {
-	color: #f49e37;
+	color: #d87e2c;
 }
 a:hover {
 	color: #666;
@@ -224,7 +224,7 @@ hgroup h2 {
  */
 
 #header nav, #header .menu {
-	background-color: #f49e37;
+	background-color: #d87e2c;
 	font-size: 14px;
 	height: 28px;
 	overflow: hidden;
@@ -368,7 +368,7 @@ aside.sidebar li:before {
 	position: absolute;
 	width: 8px;
 	height: 8px;
-	background-color: #f49e37;
+	background-color: #d87e2c;
 	content: "";
 	margin-left: -14px;
 	margin-top: 3px;
@@ -546,7 +546,7 @@ aside.sidebar a:hover {
  **/
 
 .nav-num-current {
-	background-color: #f49e37;
+	background-color: #d87e2c;
 }
 .pager {
 	background-color: #572B85;
@@ -569,7 +569,7 @@ aside.sidebar a:hover {
  */
 
 .ettan-site-name {
-	background: #f49e37;
+	background: #d87e2c;
 	float: right;
 	padding: 1px 15px;
 	border-right: solid 1px #dadada;
