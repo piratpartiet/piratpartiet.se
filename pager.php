@@ -23,7 +23,11 @@ if ( $last_page > 1 ) :
 		</span>
 	<?php endif ?>
 
-	<span class="nav-next"><?php previous_posts_link( 'Föregående sida' ); ?></span>
+	<?php if ( $paged > 1 ) : ?>
+	<span class="nav-previous">
+		<a href="<?php echo get_pagenum_link( $paged - 1 ) ?>">Föregående sida</a>
+	</span>
+	<?php endif ?>
 
 	<?php for ($x = $page_start; $x < $page_end; $x++) : ?>
 
@@ -40,7 +44,11 @@ if ( $last_page > 1 ) :
 
 	<?php endfor ?>
 
-	<span class="nav-previous"><?php next_posts_link( 'Nästa sida' ); ?></span>
+	<?php if ( $paged < $last_page ) : ?>
+	<span class="nav-next">
+		<a href="<?php echo get_pagenum_link( $paged == 0 ? 2 : $paged + 1 ) ?>">Nästa sida</a>
+	</span>
+	<?php endif ?>
 
 	<?php if ( $page_end <= $last_page ) : ?>
 		<span class="nav-last">
