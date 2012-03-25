@@ -6,11 +6,15 @@
 
 	<article role="article" id="post-<?php echo $post->ID ?>" class="ettan <?php echo $post->class ?>">
 		<header>
+
+			<?php if ( PP_ettan::is_rss_post( $post ) ) : ?>
 			<div class="ettan-site-name">
 				<a href="<?php echo $site->url ?>"><?php echo $site->name ?></a>
 			</div>
+			<?php endif ?>
+
 			<h1 class="entry-title">
-				<a target="_blank" href="<?php echo $post->permalink; ?>" rel="bookmark"><?php echo $post->title; ?></a>
+				<a <?php if ( PP_ettan::is_rss_post( $post ) ) : ?> target="_blank" <?php endif ?> href="<?php echo $post->permalink; ?>" rel="bookmark"><?php echo $post->title; ?></a>
 			</h1>
 
 			<?php get_template_part( 'entry', 'header' ); ?>
