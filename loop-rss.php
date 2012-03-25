@@ -1,8 +1,10 @@
 <?php global $ettan, $paged; ?>
 
-<?php if ( $ettan->have_posts() ) : ?>
+<?php $posts = $ettan->get_posts( !is_search() , $paged ) ?>
 
-	<?php foreach ( $ettan->get_posts( !is_search() , $paged ) as $post ) : ?>
+<?php if ( count($posts) > 0 ) : ?>
+
+	<?php foreach ( $posts as $post ) : ?>
 
 		<?php $site = $ettan->get_site($post->ID); ?>
 
@@ -40,7 +42,7 @@
 
 <?php else : ?>
 
-		<?php _e('Inga inlägg att visa.', 'piratpartiet') ?>
+		<?php _e('Inga inlÃ¤gg att visa.', 'piratpartiet') ?>
 
 <?php endif ?>
 
