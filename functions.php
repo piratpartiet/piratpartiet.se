@@ -212,6 +212,7 @@ class Piratpartiet {
 	 * @static
 	 * @return int
 	 * @since 1.0
+	 * @todo refactor and move to PP Ettan?
 	 */
 	static function get_max_num_pages() {
 		global $wp_query, $ettan;
@@ -219,7 +220,7 @@ class Piratpartiet {
 		$ppp = get_option('posts_per_page');
 
 		if ( class_exists('PP_Ettan') ) {
-			return intval( floor( count( $ettan->get_posts() ) / $ppp ) );
+			return intval( floor( count( $ettan->get_posts() ) / $ppp ) ); // TODO: Fixme
 		} else {
 			return $wp_query->max_num_pages;
 		}

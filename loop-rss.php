@@ -1,6 +1,6 @@
 <?php global $ettan, $paged; ?>
 
-<?php foreach ( $ettan->get_posts( $honor_stickyness = true, $paged ) as $post ) : ?>
+<?php foreach ( $ettan->get_posts( !is_search() , $paged ) as $post ) : ?>
 
 	<?php $site = $ettan->get_site($post->ID); ?>
 
@@ -12,7 +12,7 @@
 			<h1 class="entry-title">
 				<a target="_blank" href="<?php echo $post->permalink; ?>" rel="bookmark"><?php echo $post->title; ?></a>
 			</h1>
-			
+
 			<?php get_template_part( 'entry', 'header' ); ?>
 
 		</header>
