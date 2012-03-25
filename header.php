@@ -49,7 +49,7 @@
 					<hgroup class="wide-column">
 						<a href="<?php bloginfo('rss2_url'); ?>" class="rss-icon"></a>
 						<h1>
-							<a href="<?php bloginfo("url") ?>" rel="home"><?php bloginfo("name") ?></a>
+							<a href="<?php bloginfo("url") ?>" rel="home"><?php echo class_exists('PP_Ettan') ? 'Just nu' : get_bloginfo("name") ?></a>
 						</h1>
 						<h2><?php bloginfo("description") ?></h2>
 					</hgroup>
