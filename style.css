@@ -4,7 +4,7 @@ Theme URI: http://www.piratpartiet.se/
 Description: Piratpartiet WordPress tema
 Version: 1.0
 Author: Rickard Andersson
-Author URI: https://www.0x539.se/
+Author URI: https://0x539.se/
 License: GPL
 Tags: Piratpartiet
 */
@@ -476,7 +476,7 @@ aside.sidebar a:hover {
  */
 
 .comments-wrapper {
-	margin-top: 60px;
+	margin-top: 20px;
 }
 
 .comments-wrapper article article {
@@ -553,22 +553,32 @@ aside.sidebar a:hover {
  **/
 
 .nav-num-current {
-	background-color: #ec8b00;
+
 }
 .pager {
-	background-color: #572B85;
-	padding: 2px 5px;
-	display: inline;
-	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: #8b8c8e;
 }
 .pager a {
-	color: #fff;
+	color: #8b8c8e;
 	text-decoration: none;
 }
 
-.pager span {
-	padding: 2px;
+.pager li {
+	float: left;
+	padding: 2px 4px;
+	border-bottom: 3px solid #8b8c8e;
+}
+.pager .nav-num-current {
+	border-color: #dd4a17;
+}
+.pager .nav-num-current a {
+	color: #222;
+	font-weight: bold;
 }
 
 /**

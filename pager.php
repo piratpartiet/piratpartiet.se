@@ -16,18 +16,25 @@ if ( $paged < 5 ) {
 
 if ( $last_page > 1 ) :
 ?>
-<div class="pager">
+<ul class="pager">
 	<?php if ( $page_start > 1 ) : ?>
-		<span class="nav-first">
-			<a href="<?php echo get_pagenum_link(1) ?>">&larr; Första sidan</a>
-		</span>
+		<li class="nav-first">
+			<a href="<?php echo get_pagenum_link(1) ?>">Första sidan</a>
+		</li>
 	<?php endif ?>
 
 	<?php if ( $paged > 1 ) : ?>
-	<span class="nav-previous">
+	<li class="nav-previous">
 		<a href="<?php echo get_pagenum_link( $paged - 1 ) ?>">Föregående sida</a>
-	</span>
+	</li>
 	<?php endif ?>
+
+	<?php if ( $page_start > 1 ) : ?>
+	<li class="nav-more">
+		...
+	</li>
+	<?php endif ?>
+
 
 	<?php for ($x = $page_start; $x < $page_end; $x++) : ?>
 
@@ -38,22 +45,28 @@ if ( $last_page > 1 ) :
 			$classes[] = 'nav-num-current';
 		?>
 
-		<span class="<?php echo implode(" ", $classes) ?>">
+		<li class="<?php echo implode(" ", $classes) ?>">
 			<a href="<?php echo get_pagenum_link($x) ?>" title="Gå till sida <?php echo $x ?>"><?php echo $x ?></a>
-		</span>
+		</li>
 
 	<?php endfor ?>
 
+	<?php if ( $page_end <= $last_page ) : ?>
+	<li class="nav-more">
+		...
+	</li>
+	<?php endif ?>
+
 	<?php if ( $paged < $last_page ) : ?>
-	<span class="nav-next">
+	<li class="nav-next">
 		<a href="<?php echo get_pagenum_link( $paged == 0 ? 2 : $paged + 1 ) ?>">Nästa sida</a>
-	</span>
+	</li>
 	<?php endif ?>
 
 	<?php if ( $page_end <= $last_page ) : ?>
-		<span class="nav-last">
-			<a href="<?php echo get_pagenum_link($last_page) ?>">Sista sidan &rarr;</a>
-		</span>
+		<li class="nav-last">
+			<a href="<?php echo get_pagenum_link($last_page) ?>">Sista sidan</a>
+		</li>
 	<?php endif ?>
-</div>
+</ul>
 <?php endif;
