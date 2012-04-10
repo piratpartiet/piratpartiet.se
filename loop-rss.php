@@ -27,7 +27,7 @@
 			<div class="entry-content">
 
 				<figure class="alignleft">
-					<img width="190" height="190" src="http://lorempixel.com/190/190/" class="attachment-thumbnail wp-post-image" alt="wooosh" title="wooosh"/>
+					<img width="150" height="150" src="http://lorempixel.com/150/150/" class="attachment-thumbnail wp-post-image" alt="wooosh" title="wooosh"/>
 				</figure>
 
 				<?php echo $post->excerpt; ?>

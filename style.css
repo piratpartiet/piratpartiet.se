@@ -338,7 +338,7 @@ article .social {
 
 /** Content styles **/
 article figure {
-	margin-right: 10px;
+	margin: 0 15px 10px 0;
 }
 
 article td, article th {
