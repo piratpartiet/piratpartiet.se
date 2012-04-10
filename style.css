@@ -207,6 +207,8 @@ hgroup h1 {
 hgroup h1 a, hgroup h1 a:visited {
 	color: #000;
 	text-decoration: none;
+	background: transparent url(images/home.png) no-repeat center left;
+	padding-left: 24px;
 }
 hgroup h2 {
 	position: absolute;

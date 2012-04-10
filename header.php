@@ -49,7 +49,10 @@
 					<hgroup class="wide-column">
 						<a href="<?php bloginfo('rss2_url'); ?>" class="rss-icon"></a>
 						<h1>
-							<a href="<?php bloginfo("url") ?>" rel="home"><?php echo class_exists('PP_Ettan') && ( is_front_page() || is_home() ) ? 'Just nu' : get_bloginfo("name") ?></a>
+							<?php $justnu = class_exists('PP_Ettan') && ( is_front_page() || is_home() ) ?>
+							<a href="<?php bloginfo("url") ?>" rel="home" <?php if ( $justnu ) echo 'class="justnu"' ?>>
+								<?php echo $justnu ? 'Just nu' : get_bloginfo("name") ?>
+							</a>
 						</h1>
 						<h2><?php bloginfo("description") ?></h2>
 					</hgroup>
