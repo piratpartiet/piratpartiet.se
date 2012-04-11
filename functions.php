@@ -75,7 +75,7 @@ class Piratpartiet {
 	 * @since 1.0
 	 */
 	function excerpt_length( $length ) {
-		return 100;
+		return 85;
 	}
 
 	/**

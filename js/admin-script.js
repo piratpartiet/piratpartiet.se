@@ -1,16 +1,18 @@
 (function($) {
 	$(document).ready(function() {
-		$("form#post").submit(function() {
+		if ( $("#post_type").val() == 'post' ) {
+			$("form#post").submit(function() {
 
-			if ( $("#remove-post-thumbnail").length == 0 ) {
+				if ( $("#remove-post-thumbnail").length == 0 ) {
 
-				$("#publishing-action .button-primary").removeClass('button-primary-disabled');
-				$("#ajax-loading").css('visibility', 'hidden');
+					$("#publishing-action .button-primary").removeClass('button-primary-disabled');
+					$("#ajax-loading").css('visibility', 'hidden');
 
-				alert("Du måste välja utvald bild innan du kan publicera eller uppdatera!");
+					alert("Du måste välja utvald bild innan du kan publicera eller uppdatera!");
 
-				return false;
-			}
-		});
+					return false;
+				}
+			});
+		}
 	})
 })(jQuery);
