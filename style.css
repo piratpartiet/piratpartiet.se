@@ -160,10 +160,9 @@ a:hover {
 	margin-right: 10px;;
 }
 .narrow-column {
-	width: 33%;
+	width: 32%;
 	float: right;
-	padding: 10px 0 10px 10px
-;
+	padding: 10px 0 10px 0;
 }
 .wide-column, .narrow-column {
 	-webkit-box-sizing: border-box;
@@ -222,7 +221,6 @@ hgroup h2 {
 	display: block;
 	background: transparent url(images/rss-icon.png) no-repeat top left;
 	float: right;
-	margin-right: 10px;
 }
 
 /**
