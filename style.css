@@ -245,7 +245,7 @@ hgroup h2 {
 	padding: 0;
 }
 #header nav > ul, #header .menu > ul {
-    margin-left: 10px;
+    padding-left: 10px;
 }
 #header nav > ul > li > ul, #header .menu > ul > li > ul {
     margin-left: -10px !important;
