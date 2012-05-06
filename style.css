@@ -241,8 +241,14 @@ hgroup h2 {
 }
 #header nav ul, #header .menu ul {
 	list-style: none;
-	margin: 0 0 0 10px;
+	margin: 0;
 	padding: 0;
+}
+#header nav > ul, #header .menu > ul {
+    margin-left: 10px;
+}
+#header nav > ul > li > ul, #header .menu > ul > li > ul {
+    margin-left: -10px !important;
 }
 #header nav > ul > li, #header .menu > ul > li {
 	line-height: 24px;
@@ -252,7 +258,7 @@ hgroup h2 {
 #header nav > ul > li:hover, #header .menu > ul > li:hover{
     background: #ec8b00;
 }
-#header nav > ul > li:hover:nth-of-type(2n) > a {
+#header nav > ul > li:hover > a {
     color: #fff;
 }
 #header nav > ul > li > a, #header .menu > ul > li > a {
@@ -265,9 +271,14 @@ hgroup h2 {
 	background-color: #fff;
 	position: absolute;
 	display: none;
-    margin-top: -1px;
+    margin-top: -3px;
     font-size: 12px;
-    border: solid 1px #f1f1f1;
+
+    border: solid 1px #ec8b00;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 #header .sub-menu li, #header .children li {
 	padding: 0 10px;
