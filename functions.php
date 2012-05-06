@@ -178,7 +178,7 @@ class Piratpartiet {
 	 * @return void
 	 */
 	function init_menus() {
-		register_nav_menu('main', __('PP Huvudmeny'));
+		register_nav_menu('main', __('PP Meny'));
 	}
 
 	/**
