@@ -271,7 +271,7 @@ hgroup h2 {
 	background-color: #fff;
 	position: absolute;
 	display: none;
-    margin-top: -3px;
+    margin-top: -3px !important;
     font-size: 12px;
 
     border: solid 1px #ec8b00;
