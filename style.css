@@ -506,7 +506,6 @@ aside.sidebar a:hover {
 }
 
 .comments-wrapper article {
-	background-color: rgb(200, 200, 224);
 	background-color: rgba(200, 200, 224, 0.2);
 	padding: 10px;
 
@@ -517,7 +516,9 @@ aside.sidebar a:hover {
 	-webkit-box-shadow: 0 0 5px #ccc;
 	-moz-box-shadow: 0 0 5px #ccc;
 	box-shadow: 0 0 5px #ccc;
-
+}
+.no-rgba .comments-wrapper article {
+	border: solid 1px rgb(200, 200, 224);
 }
 
 .comment-reply-link, #commentform .form-submit input {
