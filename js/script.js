@@ -1,5 +1,15 @@
 (function($,m) {
 
+	m.addTest('cssvwunit', function(){
+
+		var div = document.createElement('div');
+		try {
+			div.style.fontSize = '3vw';
+		} catch(er){}
+		return /vw/.test(div.style.fontSize)
+
+	});
+
 	var libs = '/wp-content/themes/piratpartiet.se/js/libs/';
 
 	// Fix z-index issue with youtube iframes
