@@ -15,14 +15,12 @@
 		}
 	});
 
-	var oldie = $("html").hasClass('ie8') || $("html").hasClass('ie7');
-
 	m.load({
-		test: oldie,
-		nope: '/wp-content/themes/piratpartiet.se/js/libs/selectivizr-min.js',
+		test: $("html").hasClass('ie8') || $("html").hasClass('ie7'),
+		yep: '/wp-content/themes/piratpartiet.se/js/libs/selectivizr-min.js',
 		callback: function() {
 			alert('ie 7-8');
 		}
 	});
 
-});
+})(jQuery, Modernizr);
