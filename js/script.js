@@ -14,6 +14,11 @@ Modernizr.load({
 	}
 });
 
-/*Modernizr.load({
-	test: Modernizr.
-})*/
+Modernizr.load({
+	test: jQuery("html").hasClass('ie8') || jQuery("html").hasClass('ie7'),
+	nope: '/wp-content/themes/piratpartiet.se/js/libs/selectivizr-min.js',
+	callback: function(result) {
+
+		result ? alert('not ie7-8') : alert('ie 7-8');
+	}
+});
