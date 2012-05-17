@@ -506,6 +506,7 @@ aside.sidebar a:hover {
 }
 
 .comments-wrapper article {
+	background-color: rgb(200, 200, 224);
 	background-color: rgba(200, 200, 224, 0.2);
 	padding: 10px;
 
