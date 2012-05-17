@@ -207,7 +207,7 @@ hgroup h1 {
 hgroup h1 a, hgroup h1 a:visited {
 	color: #000;
 	text-decoration: none;
-	background: transparent url(images/home.png) no-repeat 0 12px;
+	background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAARhJREFUeNqUktmKg0AQRdPtEokLRFCIgi+C//81PituqFFExSBuc2cEJzNJBOtB7K66t45VkmVZTkeCvr2d5/mTgN3ekiSpqspxnK7rfN9nWdayrMvl8lHQ931d157nlWU5TRNQ27a9/QSl9A3SipGmKc/z6GPbNo5o5boujLYyAqdhGMIwzPOcEKJpmmmaHMch93g8giC43+/A03XdMAx4kaIo4jhumkaWZUArivIPOsuyKIoALEkSNFQUxev1ij4wfq1GwFtVVXwG7KCh5/MZjZDYWQhQ8Vwr6X7pc6xl9HQwngZM6T7Sn8XhCmPFrF7xkMIeNrtfARaM3T2bbegMw2yC78WN44gx76PDSBAEyMjR3/tLgAEASf2Kdd2kDfkAAAAASUVORK5CYII=) no-repeat 0 12px;
 	padding-left: 24px;
 }
 hgroup h2 {
@@ -390,20 +390,10 @@ aside.sidebar .two-col:nth-of-type(2n+1) {
 aside.sidebar ul {
 	margin: 0;
 	padding: 0;
-	list-style-type: none;
+	list-style: none inside url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAEUlEQVQI12N8082AFTAOLQkAGuMLwSgusKQAAAAASUVORK5CYII=);
 }
 aside.sidebar li {
-	padding: 5px;
-	text-indent: 17px;
-}
-aside.sidebar li:before {
-	position: absolute;
-	width: 8px;
-	height: 8px;
-	background-color: #ec8b00;
-	content: "";
-	margin-left: -14px;
-	margin-top: 3px;
+	padding: 5px 8px;
 }
 aside.sidebar li:nth-of-type(2n+1) {
 	background-color: #dadada;
