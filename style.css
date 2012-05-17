@@ -522,7 +522,11 @@ aside.sidebar a:hover {
 .comment-reply-link, #commentform .form-submit input {
 
 	background: -webkit-gradient(linear, left top, left bottom, from(#c8b7e3), to(#baa9d1));
+	background: -webkit-linear-gradient(top, #c8b7e3, #baa9d1);
 	background: -moz-linear-gradient(top, #c8b7e3, #baa9d1);
+	background: -o-linear-gradient(top, #c8b7e3, #baa9d1);
+	background: -ms-linear-gradient(top, #c8b7e3, #baa9d1);
+	background: linear-gradient(top, #c8b7e3, #baa9d1);
 
 	border: solid 1px #E9E9E9;
 
