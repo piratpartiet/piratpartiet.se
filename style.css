@@ -157,7 +157,7 @@ a:hover {
 	width: 64%;
 	float: left;
 	padding: 10px 0 10px 0;
-	margin-right: 10px;;
+	margin-right: 10px;
 }
 .narrow-column {
 	width: 300px;
@@ -168,6 +168,12 @@ a:hover {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+.ie7 #container {
+	background: #fff;
+}
+.ie7 #header .narrow-column, .ie7 #header .wide-column {
+	height: 38px;
 }
 #footer {
 	clear: both;
@@ -391,6 +397,9 @@ aside.sidebar ul {
 	margin: 0;
 	padding: 0;
 	list-style: none inside url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAEUlEQVQI12N8082AFTAOLQkAGuMLwSgusKQAAAAASUVORK5CYII=);
+}
+.ie7 aside.sidebar ul {
+	list-style: disc;
 }
 aside.sidebar li {
 	padding: 5px 8px;
