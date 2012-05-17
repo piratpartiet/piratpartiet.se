@@ -9,7 +9,11 @@ jQuery('iframe').each(function() {
 Modernizr.load({
 	test: Modernizr.input.placeholder,
 	nope: '/wp-content/themes/piratpartiet.se/js/libs/jquery.placeholder.min.js',
-	complete: function() {
-		jQuery("input[placeholder]").placeholder();
+	callback: function(result) {
+		result || jQuery("input[placeholder]").placeholder();
 	}
 });
+
+/*Modernizr.load({
+	test: Modernizr.
+})*/
