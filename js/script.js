@@ -19,7 +19,7 @@
 
 	m.load({
 		test: $("html").hasClass('ie8') || $("html").hasClass('ie7'),
-		yep: [ libs + 'nwmatcher-1.2.5.js', libs + 'selectivizr-min.js']
+		yep: [ libs + 'nwmatcher-1.2.5.min.js', libs + 'selectivizr-min.js']
 	});
 
 })(jQuery, Modernizr);
