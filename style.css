@@ -184,7 +184,9 @@ a:hover {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-
+}
+.ie7 .two-col {
+	width: 45%;
 }
 .three-col {
 	width: 33%;
@@ -192,7 +194,9 @@ a:hover {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-
+}
+.ie7 .three-col {
+	width: 30%;
 }
 
 /**
