@@ -1,4 +1,4 @@
-		<footer id="footer">
+		<footer id="footer" class="clearfix">
 			<?php dynamic_sidebar('footer-section-a') ?>
 			<?php dynamic_sidebar('footer-section-b') ?>
 			<?php dynamic_sidebar('footer-section-c') ?>
