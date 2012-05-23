@@ -108,6 +108,7 @@ td { vertical-align: top; }
    Author: 
    ========================================================================== */
 
+
 /**
  * 	Main styles
  */
@@ -201,11 +202,10 @@ a:hover {
 	height: 180px;
 }
 hgroup h1 {
-	font-family: 'Impact';
-	margin: 0;
+	font-family: Impact, Charcoal, sans-serif;
 	font-weight: 100;
 	letter-spacing: 0.04em;
-	margin-top: 12px;
+	margin: 12px 0 0 0;
 	line-height: 1em;
 }
 hgroup h1 a, hgroup h1 a:visited {
