@@ -650,7 +650,6 @@ aside.sidebar a:hover {
 @media only screen and (max-width: 768px) {
 	#container, .narrow-column, .wide-column, .two-col, .three-col, #footer section {
 		width: 100%;
-		float: none;
 	}
 	#header .wide-column {
 		width: auto;
