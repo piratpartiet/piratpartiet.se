@@ -685,6 +685,9 @@ aside.sidebar a:hover {
 		background-size: 100%;
 		height: 18vw;
 	}
+	article.post.ettan .entry-title {
+		width: auto;
+	}
 }
 
 
