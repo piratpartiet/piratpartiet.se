@@ -235,7 +235,7 @@ hgroup h2 {
 #header nav, #header .menu {
 	background-color: #f1f1f1;
     border-top: solid 1px #DADADA;
-    border-bottom: solid 2px #DADADA;
+    border-bottom: solid 1px #DADADA;
 
     font-family: Arial, sans-serif;
     font-size: 15px;
@@ -307,7 +307,7 @@ hgroup h2 {
  * Article styles
  */
 
-article.ettan {
+.home article {
 	margin-bottom: 20px;
 	padding-bottom: 35px;
 	border-bottom: solid 1px #dadada;
