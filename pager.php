@@ -1,7 +1,7 @@
 <?php
 global $wp_query, $paged;
 
-$last_page = Piratpartiet::get_max_num_pages();
+$last_page = $wp_query->max_num_pages;
 
 if ( $paged < 5 ) {
 	$page_start = 1;
