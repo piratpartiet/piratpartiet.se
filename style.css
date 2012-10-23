@@ -307,6 +307,10 @@ hgroup h2 {
  * Article styles
  */
 
+article {
+	word-wrap: break-word;
+}
+
 .home article, .search article {
 	margin-bottom: 20px;
 	padding-bottom: 35px;
