@@ -61,3 +61,4 @@
 					</div>
 				</div>
 			</header>
+			<?php dynamic_sidebar('sticky') ?>

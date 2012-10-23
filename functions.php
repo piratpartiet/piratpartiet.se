@@ -174,6 +174,12 @@ class Piratpartiet {
 		$args['description'] = "Högra delen av sidfoten";
 
 		register_sidebar($args);
+
+		$args['name']        = "Överst i innehållsspalten";
+		$args['id']          = 'sticky';
+		$args['description'] = 'Visas under sidans namn/rubrik men ovanför inlägg eller sida';
+
+		register_sidebar($args);
 	}
 
 	/**
