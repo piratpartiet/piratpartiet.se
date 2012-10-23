@@ -3,8 +3,17 @@
 		
 	<article role="article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header>
+
+			<?php if ( get_post_meta( get_the_ID(), 'pp-ettan-site-name', true ) ) : ?>
+            <div class="ettan-site-name">
+                <a href="<?php echo esc_attr( get_post_meta( get_the_ID(), 'pp-ettan-site-url', true ) ) ?>">
+					<?php echo esc_html( get_post_meta( get_the_ID(), 'pp-ettan-site-name', true ) ) ?>
+                </a>
+            </div>
+			<?php endif ?>
+
 			<h1 class="entry-title">
-				
+
 				<?php if (!is_single() && !is_page()) : ?>
 				<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
 				
