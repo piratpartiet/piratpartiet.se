@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <div id="main" class="clearfix">
 	<div id="content" class="wide-column" role="main">
+		<?php dynamic_sidebar('sticky') ?>
 		<?php get_template_part('loop') ?>
 	</div>
 	<aside class="sidebar narrow-column">
