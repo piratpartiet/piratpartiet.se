@@ -1,7 +1,7 @@
 <section>
 	<div class="textwidget">
 		<p>
-			<a href="#" target="_blank">
+			<a href="/politik/piratpartiet-pa-fem-minuter/" target="_blank">
 				<img class="alignnone" title="Vad ar piratpartiet" src="http://opassande.se/bilder/pp2012/hemsidan/vadarpiratpartiet.png" alt="" width="300" height="108" />
 			</a>
 		</p>
@@ -9,10 +9,10 @@
 </section>
 <section>
 	<div class="textwidget">
-		<a href="#" target="_blank">
+		<a href="/aktivera/bli-guldpirat/" target="_blank">
 			<img class="alignnone" title="Bli guldpirat" src="http://opassande.se/bilder/pp2012/hemsidan/bliguldpirat.png" alt="" width="300" height="91" />
 		</a>
-		<a href="http://piratpartiet.se/blimedlem" target="_blank">
+		<a href="http://blipirat.nu/" target="_blank">
 			<img class="alignnone" title="Bli medlem" src="http://opassande.se/bilder/pp2012/hemsidan/blimedlem.png" alt="" width="300" height="86" />
 		</a>
 	</div>
