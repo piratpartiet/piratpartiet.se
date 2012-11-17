@@ -172,8 +172,11 @@ body, button, select, input, textarea {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Liberation Sans', FreeSans, Arial, Helvetica, sans-serif;
-	margin: 0 0 0.5em 0;
+	margin: 0;
 	padding: 0;
+}
+p {
+  margin: 0 0 1em 0;
 }
 
 /** Link styles **/ 
