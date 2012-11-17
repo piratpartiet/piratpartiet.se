@@ -9,6 +9,35 @@ License: GPL
 Tags: Piratpartiet
 */
 
+@mixin button {
+  background: #c8b7e3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c8b7e3), to(#baa9d1));
+  background: -webkit-linear-gradient(top, #c8b7e3, #baa9d1);
+  background: -moz-linear-gradient(top, #c8b7e3, #baa9d1);
+  background: -o-linear-gradient(top, #c8b7e3, #baa9d1);
+  background: -ms-linear-gradient(top, #c8b7e3, #baa9d1);
+  background: linear-gradient(top, #c8b7e3, #baa9d1);
+
+  border: solid 1px #E9E9E9;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  padding: 3px 15px;
+  display: inline-block;
+
+  -webkit-box-shadow: 0 1px 1px 0px #eee;
+  -moz-box-shadow: 0 1px 1px 0px #eee;
+  box-shadow: 0 1px 1px 0px #eee;
+
+  text-shadow: 0px 1px 0px #ccc;
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+
 /* HTML5 ✰ Boilerplate
  * ==|== normalize ==========================================================
  */
@@ -547,32 +576,7 @@ aside.sidebar a:hover {
 }
 
 .comment-reply-link, #commentform .form-submit input {
-
-	background: #c8b7e3;
-	background: -webkit-gradient(linear, left top, left bottom, from(#c8b7e3), to(#baa9d1));
-	background: -webkit-linear-gradient(top, #c8b7e3, #baa9d1);
-	background: -moz-linear-gradient(top, #c8b7e3, #baa9d1);
-	background: -o-linear-gradient(top, #c8b7e3, #baa9d1);
-	background: -ms-linear-gradient(top, #c8b7e3, #baa9d1);
-	background: linear-gradient(top, #c8b7e3, #baa9d1);
-
-	border: solid 1px #E9E9E9;
-
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-
-	padding: 3px 15px;
-	display: inline-block;
-
-	-webkit-box-shadow: 0 1px 1px 0px #eee;
-	-moz-box-shadow: 0 1px 1px 0px #eee;
-	box-shadow: 0 1px 1px 0px #eee;
-
-	text-shadow: 0px 1px 0px #ccc;
-	color: #000;
-	font-weight: bold;
-	font-size: 12px;
+  @include button;
 }
 
 .comment-reply-link:hover {
@@ -626,6 +630,27 @@ aside.sidebar a:hover {
 .pager .nav-num-current a {
 	color: #222;
 	font-weight: bold;
+}
+
+/**
+ * Forms in content
+ */
+
+[role='main'] form {
+  padding: 20px 20px 10px 20px;
+  background: #f1f1f1;
+
+  button, input[type='submit'] {
+    @include button;
+  }
+
+  label.checkbox {
+    display: block;
+  }
+
+  label, input, button {
+    margin-bottom: 10px;
+  }
 }
 
 /**
