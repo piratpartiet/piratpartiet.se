@@ -35,7 +35,7 @@
 
 	$( '#header .sub-menu .sub-menu, #header .children .children' ).each( function () {
 		var $this = $( this );
-		$this.css( 'left', $this.parent().outerWidth() - 5 );
+		$this.css( 'marginLeft', $this.parent().outerWidth() - 3 );
 	} );
 
 })( jQuery, Modernizr );

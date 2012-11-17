@@ -242,24 +242,30 @@ a:hover {
 #banner {
 	height: 180px;
 }
-hgroup h1 {
-	font-family: Impact, Charcoal, sans-serif;
-	font-weight: 100;
-	letter-spacing: 0.04em;
-	margin: 12px 0 0 0;
-	line-height: 1em;
+hgroup {
+  h1 {
+    font-family: Impact, Charcoal, sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.04em;
+    margin: 12px 0 0 0;
+    line-height: 1em;
+  }
+
+  h2 {
+    position: absolute;
+    text-indent: -999em;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  a, a:visited {
+    color: #000;
+    text-decoration: none;
+    background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAARhJREFUeNqUktmKg0AQRdPtEokLRFCIgi+C//81PituqFFExSBuc2cEJzNJBOtB7K66t45VkmVZTkeCvr2d5/mTgN3ekiSpqspxnK7rfN9nWdayrMvl8lHQ931d157nlWU5TRNQ27a9/QSl9A3SipGmKc/z6GPbNo5o5boujLYyAqdhGMIwzPOcEKJpmmmaHMch93g8giC43+/A03XdMAx4kaIo4jhumkaWZUArivIPOsuyKIoALEkSNFQUxev1ij4wfq1GwFtVVXwG7KCh5/MZjZDYWQhQ8Vwr6X7pc6xl9HQwngZM6T7Sn8XhCmPFrF7xkMIeNrtfARaM3T2bbegMw2yC78WN44gx76PDSBAEyMjR3/tLgAEASf2Kdd2kDfkAAAAASUVORK5CYII=) no-repeat 0 12px;
+    padding-left: 24px;
+  }
 }
-hgroup h1 a, hgroup h1 a:visited {
-	color: #000;
-	text-decoration: none;
-	background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAARhJREFUeNqUktmKg0AQRdPtEokLRFCIgi+C//81PituqFFExSBuc2cEJzNJBOtB7K66t45VkmVZTkeCvr2d5/mTgN3ekiSpqspxnK7rfN9nWdayrMvl8lHQ931d157nlWU5TRNQ27a9/QSl9A3SipGmKc/z6GPbNo5o5boujLYyAqdhGMIwzPOcEKJpmmmaHMch93g8giC43+/A03XdMAx4kaIo4jhumkaWZUArivIPOsuyKIoALEkSNFQUxev1ij4wfq1GwFtVVXwG7KCh5/MZjZDYWQhQ8Vwr6X7pc6xl9HQwngZM6T7Sn8XhCmPFrF7xkMIeNrtfARaM3T2bbegMw2yC78WN44gx76PDSBAEyMjR3/tLgAEASf2Kdd2kDfkAAAAASUVORK5CYII=) no-repeat 0 12px;
-	padding-left: 24px;
-}
-hgroup h2 {
-	position: absolute;
-	text-indent: -999em;
-	opacity: 0;
-}
+
 .rss-icon {
 	width: 36px;
 	height: 36px;
@@ -338,15 +344,19 @@ hgroup h2 {
     font-size: 12px;
 
     // 2nd+ level sub menus
-    .sub-menu, .children { top: 4px; }
+    .sub-menu, .children {
+      margin-top: -24px;
+    }
+
+    a {
+      padding: 2px 12px;
+    }
 
     border: solid 1px #ec8b00;
 
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-
-    li { padding: 0 }
 
     & > li:nth-of-type(2n) { background-color: #dadada }
     & > li:hover { background-color: #aaa }
