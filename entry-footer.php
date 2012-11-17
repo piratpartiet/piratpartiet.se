@@ -19,14 +19,13 @@
 			</a>
 		</div>
 		<div class="tweetmeme_button">
-			<a href="http://api.tweetmeme.com/share?url=<?php echo urlencode(get_permalink()) ?>">
-				<img src="http://api.tweetmeme.com/imagebutton.gif?url=<?php echo urlencode(get_permalink()) ?>" height="61" width="50" />
-			</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="sv" data-size="large">Tweeta</a>
 		</div>
 	</div>
 	<?php
 		wp_enqueue_script('flattr');
 		wp_enqueue_script('gplusone');
+		wp_enqueue_script('twitter');
 	?>
 <?php endif ?>
 
