@@ -212,8 +212,9 @@ class Piratpartiet {
 			wp_register_script('flattr', $protocol . '://api.flattr.com/js/0.6/load.js?mode=auto&language=sv_SE&category=text', array(), false, true);
 			wp_register_script('facebook', $protocol . '://connect.facebook.net/sv_SE/all.js#xfbml=1', array(), false, true);
 			wp_register_script('gplusone', $protocol . '://apis.google.com/js/plusone.js', array(), false, true);
-		} else {
-			wp_enqueue_script($this->plugin_name . '-admin-script', get_bloginfo("stylesheet_directory") . '/js/admin-script.js', array('jquery') );
+		} else if (!class_exists('PP_Ettan')) {
+            // Don't force images on main site
+			wp_enqueue_script($this->plugin_name . '-force-image-script', get_bloginfo("stylesheet_directory") . '/js/force-image.js', array('jquery') );
 		}
 	}
 
