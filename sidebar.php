@@ -5,7 +5,6 @@
 				<img class="alignnone" title="Vad ar piratpartiet" src="http://opassande.se/bilder/pp2012/hemsidan/vadarpiratpartiet.png" alt="" width="300" height="108" />
 			</a>
 		</p>
-		<iframe width="299" height="152" src="http://www.youtube.com/embed/i11I_tlkedo" frameborder="0" allowfullscreen></iframe>
 	</div>
 </section>
 <section>
