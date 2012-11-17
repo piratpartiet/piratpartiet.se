@@ -230,7 +230,7 @@ class Piratpartiet {
         if ($nonce && wp_verify_nonce($_POST['_wpnonce'], '_404_notice')) {
             $recipients = array(
                 'rickard.andersson@piratpartiet.se',
-                'ledning@piratpartiet.se',
+                'ledningen@piratpartiet.se',
             );
 
             $url = $_SERVER['HTTP_ORIGIN'] . $_SERVER['REQUEST_URI'];
