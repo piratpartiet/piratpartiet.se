@@ -33,9 +33,9 @@
 		yep:[ libs + 'nwmatcher-1.2.5.min.js', libs + 'selectivizr-min.js']
 	} );
 
-	$( '#header .sub-menu .sub-menu' ).each( function () {
+	$( '#header .sub-menu .sub-menu, #header .children .children' ).each( function () {
 		var $this = $( this );
-		$this.css( 'marginLeft', $this.parent().outerWidth() );
+		$this.css( 'left', $this.parent().outerWidth() - 5 );
 	} );
 
 })( jQuery, Modernizr );
