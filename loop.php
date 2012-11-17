@@ -54,4 +54,11 @@
 
 	<?php get_template_part( 'pager' ) ?>
 
+<?php elseif (is_search()) : ?>
+
+    <article>
+        <h1>Din sökning gav inget resultat</h1>
+        <p>Din sökning på <em><?php echo filter_var($_GET['s'], FILTER_SANITIZE_STRING) ?></em> gav tyvärr inget resultat.</p>
+    </article>
+
 <?php endif; ?>
