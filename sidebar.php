@@ -1,7 +1,7 @@
 <section>
 	<div class="textwidget">
 		<p>
-			<a href="http://www.piratpartiet.se/politik/piratpartiet-pa-fem-minuter/" target="_blank">
+			<a href="http://www.piratpartiet.se/politik/ppfemminuter/" target="_blank">
 				<img class="alignnone" title="Vad ar piratpartiet" src="http://opassande.se/bilder/pp2012/hemsidan/vadarpiratpartiet.png" alt="" width="300" height="108" />
 			</a>
 		</p>
