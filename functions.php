@@ -203,7 +203,7 @@ class Piratpartiet {
 
 			$protocol = isset($_SERVER['HTTPS']) ? "https" : "http";
 
-			wp_enqueue_style($this->plugin_name . '-style', get_bloginfo( 'stylesheet_directory') . "/style.css", array(), 9);
+			wp_enqueue_style($this->plugin_name . '-style', get_bloginfo( 'stylesheet_directory') . "/style.css", array(), 10);
 
 			wp_enqueue_script('modernizr',  get_bloginfo("stylesheet_directory") . "/js/libs/modernizr-2.5.3.min.js");
 //			wp_enqueue_script($this->plugin_name . '-plugins', get_bloginfo("stylesheet_directory") . "/js/plugins.js", array('jquery'), false, true);
@@ -216,6 +216,37 @@ class Piratpartiet {
 			wp_enqueue_script($this->plugin_name . '-admin-script', get_bloginfo("stylesheet_directory") . '/js/admin-script.js', array('jquery') );
 		}
 	}
+
+    /**
+     * Handle requests to send notices about 404 pages
+     *
+     * @return bool
+     * @since 1.0
+     */
+    function handle_404_form() {
+
+        $nonce = isset($_POST['_wpnonce']) ? $_POST['_wpnonce'] : false;
+
+        if ($nonce && wp_verify_nonce($_POST['_wpnonce'], '_404_notice')) {
+            $recipients = array(
+                'rickard.andersson@piratpartiet.se',
+                'ledning@piratpartiet.se',
+            );
+
+            $url = $_SERVER['HTTP_ORIGIN'] . $_SERVER['REQUEST_URI'];
+            $host = $_SERVER['HTTP_HOST'];
+            $subject = 'Anmälan om sida som inte kunde hittas';
+            $template = 'En besökare på %s har anmält en sida som inte kunde hittas. <br><br>Adressen som besökaren försökte nå var: <a href="%s">%s</a>.<br><br>Mvh<br>Internet';
+            $headers = 'Content-Type:text/html';
+            $message = sprintf($template, $host, $url, $url);
+
+            @wp_mail($recipients, $subject, $message, $headers);
+
+            return true;
+        }
+
+        return false;
+    }
 
 	/**
 	 * Wrapper function for $wp_query->max_num_pages when using PP ettan
@@ -237,7 +268,7 @@ class Piratpartiet {
 }
 
 // Load the theme
-new Piratpartiet();
+$pp = new Piratpartiet();
 
 /**
  * Get the swedish month name

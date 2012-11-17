@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php $sent = $pp->handle_404_form() ?>
 <div id="main" class="clearfix">
     <div id="content" class="wide-column" role="main">
         <article>
@@ -8,11 +9,17 @@
         <p> Om du är säker på att innehållet du söker borde finnas här kan du anmäla detta till oss.</p>
 
         <form action="" method="post">
-            <label class="checkbox">
-                <input type="checkbox" checked> Den här sidan har funnits innan flytten till ny plattform
-            </label>
+            <?php if ($sent) : ?>
+                <p>Din anmälan är mottagen, tack för hjälpen!</p>
+            <?php else : ?>
+                <?php wp_nonce_field('_404_notice'); ?>
 
-            <button>Anmäl</button>
+                <label class="checkbox">
+                    <input type="checkbox" checked> Den här sidan har funnits innan flytten till ny plattform
+                </label>
+
+                <button>Anmäl</button>
+            <?php endif ?>
         </form>
     </div>
     <aside class="sidebar narrow-column">
