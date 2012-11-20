@@ -1,21 +1,27 @@
 <section>
 	<div class="textwidget">
 		<p>
-			<a href="http://www.piratpartiet.se/politik/ppfemminuter/" target="_blank">
-				<img class="alignnone" title="Vad ar piratpartiet" src="http://opassande.se/bilder/pp2012/hemsidan/vadarpiratpartiet.png" alt="" width="300" height="108" />
+			<a href="http://www.piratpartiet.se/politik/ppfemminuter/">
+				<img class="alignnone" title="Vad ar piratpartiet" src="/wp-content/themes/piratpartiet.se/images/vadarpiratpartiet.png" alt="" width="300" height="108" />
 			</a>
 		</p>
 	</div>
 </section>
 <section>
 	<div class="textwidget">
-		<a href="http://www.piratpartiet.se/aktivera/bli-guldpirat/" target="_blank">
-			<img class="alignnone" title="Bli guldpirat" src="http://opassande.se/bilder/pp2012/hemsidan/bliguldpirat.png" alt="" width="300" height="91" />
+		<a href="http://www.piratpartiet.se/aktivera/bli-guldpirat/">
+			<img class="alignnone" title="Bli guldpirat" src="/wp-content/themes/piratpartiet.se/images/bliguldpirat.png" alt="" width="300" height="91" />
 		</a>
-		<a href="http://blipirat.nu/" target="_blank">
-			<img class="alignnone" title="Bli medlem" src="http://opassande.se/bilder/pp2012/hemsidan/blimedlem.png" alt="" width="300" height="86" />
+		<a href="http://blipirat.nu/">
+			<img class="alignnone" title="Bli medlem" src="/wp-content/themes/piratpartiet.se/images/blimedlem.png" alt="" width="300" height="86" />
 		</a>
 	</div>
+</section>
+<section>
+    <div class="textwidget social">
+        <a href="https://twitter.com/piratpartiet" class="icon-social icon-twitter"></a><a href="https://plus.google.com/+piratpartiet/" class="icon-social icon-gplus"></a><a href="https://www.facebook.com/piratpartiet" class="icon-social icon-facebook"></a>
+        <div class="social-text">Följ oss på:</div>
+    </div>
 </section>
 
 
