@@ -18,7 +18,7 @@
 	</div>
 </section>
 <section>
-    <div class="textwidget social">
+    <div class="textwidget social clearfix">
         <a href="https://twitter.com/piratpartiet" class="icon-social icon-twitter"></a><a href="https://plus.google.com/+piratpartiet/" class="icon-social icon-gplus"></a><a href="https://www.facebook.com/piratpartiet" class="icon-social icon-facebook"></a>
         <div class="social-text">Följ oss på:</div>
     </div>
