@@ -28,7 +28,7 @@
 		<meta property="og:image" content="<?php bloginfo("template_directory") ?>/images/apple-touch-icon-114x114.png">
 		<meta property="og:image:width" content="114">
 		<meta property="og:image:height" content="114">
-		<meta property="og:url" content="http<?php if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") echo 's' ?>://<?php echo $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI'] ?>">
+		<meta property="og:url" content="http<?php if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") echo 's' ?>://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
 		<meta property="fb:admins" content=""> <?php //todo: changeme, use graph.facebook.com/username or /userid  ?>
 	</head>
 	<!--[if lt IE 7 ]> <body <?php body_class('ie6'); ?>> <![endif]-->
