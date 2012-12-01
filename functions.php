@@ -43,6 +43,7 @@ class Piratpartiet {
 		// Change some excerpt settings
 		add_filter('excerpt_more', array($this, 'excerpt_more'));
 		add_filter('excerpt_length', array($this, 'excerpt_length'), 999);
+		add_filter('wp_trim_words', array($this, 'wp_trim_words'), 999, 3);
 
 		// Filters for adding the featured image to the rss feed, only applies to sub-blogs. The main blog
 		// is fetching the content from RSS and the images are already included there.
@@ -117,6 +118,29 @@ class Piratpartiet {
 	function excerpt_more($more) {
 		global $post;
 		return '... <a href="'. get_permalink($post->ID) .'">Läs mer</a>';
+	}
+
+	/**
+	 * ATtached to the filter wp_trim_words
+	 *
+	 * @param string $text
+	 * @param string $num_words
+	 * @param string $more
+	 *
+	 * @return string
+	 */
+	function wp_trim_words($text, $num_words, $more) {
+		global $post;
+
+		$moreLength = mb_strlen($more);
+
+		$moreAdded = mb_substr($text, -1 * $moreLength) == $more;
+
+		if (!$moreAdded) {
+			$text .= ' <a href="'. get_permalink($post->ID) .'">Läs mer</a>';
+		}
+
+		return $text;
 	}
 
 	/**
