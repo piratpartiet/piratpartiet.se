@@ -18,6 +18,12 @@ class Piratpartiet {
 	private $plugin_name = "piratpartiet";
 
 	/**
+	 * URL to the site which holds the remote sidebar
+	 * @var string
+	 */
+	private $remote_sidebar_url = 'http://www.piratpartiet.se/';
+
+	/**
 	 * Initializes the theme functionality
 	 */
 	function __construct() {
@@ -44,6 +50,30 @@ class Piratpartiet {
 			add_filter('the_excerpt_rss', array($this, 'featured_image_rss') );
 			add_filter('the_content_feed', array($this, 'featured_image_rss') );
 		}
+
+		// Action to fetch remote sidebar
+		add_action('pp_remote_sidebar', array($this, 'pp_remote_sidebar'));
+	}
+
+	/**
+	 * Fetches and prints the remote sidebar
+	 */
+	public function pp_remote_sidebar() {
+
+		$sidebar = get_transient('pp_remote_sidebar');
+
+		if ($sidebar === false) {
+			$sidebar = file_get_contents($this->remote_sidebar_url . '?pp_remote_sidebar=1');
+
+			// if doctype is in the response, we've probably got the whole page which we don't want
+			if (preg_match('/<!doctype/i', $sidebar)) {
+				$sidebar = '';
+			}
+
+			set_transient('pp_remote_sidebar', $sidebar, 60*15);
+		}
+
+		echo $sidebar;
 	}
 
 	/**
