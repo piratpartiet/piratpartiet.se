@@ -1,0 +1,1 @@
+This repository contains the theme used by www.piratpartiet.se and related sites.
