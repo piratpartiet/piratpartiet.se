@@ -2,8 +2,19 @@
 <?php the_tags("", ", ", ""); ?>
 <?php $tags = ob_get_contents(); ob_end_clean(); ?>
 
+<?php $timestamp = get_the_date('U') ?>
+<div class="entry-meta"> [
+	<span class="entry-date">
+		<time class="published updated" pubdate datetime="<?php echo date("Y-m-d", get_the_date('U')) ?>">
+            <?php echo date("j ", $timestamp) ?> <?php echo month_sv( date("m", $timestamp) ) ?> <?php echo date("Y", $timestamp) ?>
+        </time>
+	</span> |
+    <?php comments_number( __('inga kommentarer', 'piratpartiet'), __('en kommentar', 'piratpartiet'), __('% kommentarer', 'piratpartiet') ) ?>
+    ] </div>
+
+
 <?php if ( is_single() || is_page() ) : ?>
-	<div class="social">
+	<div class="social clearfix">
 		<a class="FlattrButton"
 		    title="<?php the_title() ?>"
 		    data-flattr-uid="piratpartiet"
@@ -29,5 +40,3 @@
 	?>
 <?php endif ?>
 
-<?php echo $tags ?>
-<div class="clearfix"></div>
