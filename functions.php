@@ -1,7 +1,7 @@
 <?php
 /**
- * Piratpartied WordPress Theme
- * @version 1.0
+ * Piratpartiet WordPress Theme
+ * @version 1.1
  * @author Rickard Andersson <rickard@0x539.se>
  */
 
