@@ -1,0 +1,25 @@
+/**
+ * Forms in content
+ */
+
+[role='main'] form {
+    padding: 20px 20px 10px 20px;
+    background: #f1f1f1;
+
+    button, input[type='submit'] {
+        @include button;
+    }
+
+    label.checkbox {
+        display: block;
+    }
+
+    label, input, button, p {
+        margin: 0 0 10px 0;
+    }
+}
+
+
+[role='main'] form.clean {
+    background: none;
+}

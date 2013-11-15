@@ -1,0 +1,84 @@
+/**
+ * Article styles
+ */
+
+.home, .search, .archive {
+    article {
+        margin-bottom: 20px;
+        padding-bottom: 35px;
+        border-bottom: solid 1px #dadada;
+    }
+}
+
+article {
+    word-wrap: break-word;
+
+    // Heading styles
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2;
+        color: #572b85;
+        margin-bottom: 0.5em;
+    }
+
+    h1 { font-size: 20px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 16px; }
+    h4 { font-size: 16px; }
+    h5 { font-size: 16px; }
+    h6 { font-size: 16px; }
+
+
+    // Header styles
+    .entry-meta {
+        margin-bottom: 1em;
+        font-size: 11px;
+    }
+
+    // Footer styles
+    footer {
+        padding-top: 5px;
+        clear: left;
+        font-weight: bold;
+        font-size: 11px;
+
+        a, a:visited {
+            color: #222;
+            text-decoration: none;
+            font-size: 11px;
+        }
+    }
+
+    // Social styles
+    article .social {
+        float: right;
+    }
+
+    // Content styles
+    td, th {
+        padding: 5px 10px;
+        border: solid 1px #dadada;
+    }
+    th {
+        background-color: #eee;
+    }
+
+
+
+    // Make room for the name tag
+    &.post.ettan .entry-title {
+        width: 480px;
+    }
+}
+
+
+.entry-title a {
+    color: #572b85;
+    text-decoration: none;
+}
+
+
+
+.tweetmeme_button, .pusha-button {
+    display: inline-block;
+    vertical-align: top;
+}

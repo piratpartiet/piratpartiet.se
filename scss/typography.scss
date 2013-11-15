@@ -1,0 +1,23 @@
+/**
+ * Typography
+ */
+
+body, button, select, input, textarea {
+    font-family: Verdana, Tahoma, Geneva, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Liberation Sans', FreeSans, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0 0 1em 0;
+}
+
+/** Link styles **/
+a, a:visited {
+    color: #ec8b00;
+}
+a:hover {
+    color: #666;
+}

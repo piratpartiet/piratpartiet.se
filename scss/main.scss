@@ -1,0 +1,23 @@
+/**
+ * 	Main styles
+ */
+
+body {
+    background-color: #e0e0e0;
+}
+#main, .header-bottom {
+    background-color: #fff;
+    padding: 0 20px;
+}
+#content, .sidebar {
+    border-top: solid 1px #dadada;
+    padding-top: 20px;
+}
+
+// Widgets in the main content area
+
+#content > section {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #dadada;
+    margin-bottom: 20px;
+}

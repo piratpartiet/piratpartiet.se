@@ -1,0 +1,32 @@
+/**
+ * Pagination
+ **/
+
+.nav-num-current {
+
+}
+.pager {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #8b8c8e;
+}
+.pager a {
+    color: #8b8c8e;
+    text-decoration: none;
+}
+
+.pager li {
+    float: left;
+    padding: 2px 4px;
+    border-bottom: 3px solid #8b8c8e;
+}
+.pager .nav-num-current {
+    border-color: #dd4a17;
+}
+.pager .nav-num-current a {
+    color: #222;
+    font-weight: bold;
+}

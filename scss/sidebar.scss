@@ -1,0 +1,44 @@
+/**
+ * Sidebar styles
+ */
+
+aside.sidebar section {
+    margin-bottom: 20px;
+}
+aside.sidebar .two-col:nth-of-type(2n) {
+    padding-left: 5px;
+}
+aside.sidebar .two-col:nth-of-type(2n+1) {
+    padding-right: 5px;
+}
+
+/** List styles **/
+aside.sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none inside url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAEUlEQVQI12N8082AFTAOLQkAGuMLwSgusKQAAAAASUVORK5CYII=);
+}
+.ie7 aside.sidebar ul {
+    list-style: disc;
+}
+aside.sidebar li {
+    padding: 5px 8px;
+}
+aside.sidebar li:nth-of-type(2n+1) {
+    background-color: #dadada;
+}
+
+/** Typography **/
+aside.sidebar {
+    font-size: 11px;
+}
+aside.sidebar h1 {
+    font-size: 14px;
+}
+aside.sidebar a {
+    color: #222;
+    text-decoration: none;
+}
+aside.sidebar a:hover {
+    text-decoration: underline;
+}

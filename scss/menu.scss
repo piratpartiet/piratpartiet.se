@@ -1,0 +1,90 @@
+/**
+ * 	Menu styles
+ */
+#header {
+
+    nav, .menu {
+        background-color: #f1f1f1;
+        border-top: solid 1px #DADADA;
+        border-bottom: solid 1px #DADADA;
+
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+
+        min-height: 24px;
+        overflow: hidden;
+
+        a {
+            text-decoration: none;
+            height: 100%;
+            display: block;
+            padding: 0 10px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        & > ul {
+            padding-left: 10px;
+        }
+
+        & > ul > li {
+            line-height: 24px;
+            float: left;
+            padding: 0;
+
+            & > a {
+                color: #423e45;
+                font-weight: bold;
+            }
+
+            &:hover {
+                background: #ec8b00;
+
+                & > a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+
+    /** Sub menu styles **/
+
+    // Visibility instead of display to enable width calculation when element is hidden
+    li:hover > .sub-menu {
+        visibility: visible;
+    }
+
+    .sub-menu, .children {
+
+        background-color: #fff;
+        position: absolute;
+        visibility: hidden;
+        font-size: 12px;
+
+        // 2nd+ level sub menus
+        .sub-menu, .children {
+            margin-top: -24px;
+        }
+
+        a {
+            padding: 2px 12px;
+        }
+
+        border: solid 1px #ec8b00;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+
+        & > li:nth-of-type(2n) { background-color: #dadada }
+        & > li:hover { background-color: #aaa }
+
+        a { color: #222 }
+    }
+}

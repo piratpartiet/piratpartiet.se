@@ -1,0 +1,27 @@
+/**
+ * Footer styles
+ */
+#footer {
+    padding: 10px 0;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    background-color: #f1f1f1;
+}
+#footer section {
+    width: 33%;
+    float: left;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.no-flexbox #footer > div {
+    float: left;
+}
+#footer > div:last-of-type {
+    border-right: none;
+}
+#footer section {
+    padding: 10px 20px;
+    min-height: 100%;
+}

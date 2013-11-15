@@ -1,0 +1,47 @@
+/**
+ * 	Layout styles
+ */
+
+#container {
+    width: 1000px;
+    margin: auto;
+}
+.wide-column {
+    width: 64%;
+    float: left;
+    padding: 10px 0 10px 0;
+    margin-right: 10px;
+}
+.narrow-column {
+    width: 300px;
+    float: right;
+    padding: 10px 0 10px 0;
+}
+.wide-column, .narrow-column {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ie7 #container {
+    background: #fff;
+}
+.ie7 #header .narrow-column, .ie7 #header .wide-column {
+    height: 38px;
+}
+#footer {
+    clear: both;
+}
+.two-col {
+    width: 50%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.three-col {
+    width: 33%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
