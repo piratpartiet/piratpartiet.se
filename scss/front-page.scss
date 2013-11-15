@@ -10,7 +10,66 @@
     margin-top: -21px;
     min-width: 80px;
 }
+
 .ettan-site-name a, .ettan-site-name a:visited, .ettan-site-name a:visited {
     color: #222;
     text-decoration: none;
+}
+
+section.press {
+    background: #dbc7ef;
+
+    .ettan-site-name {
+        display: none;
+    }
+
+    article.post.ettan .entry-title {
+        width: auto;
+    }
+}
+
+section.central, section.local {
+    width: 272.7px;
+    float: left;
+
+    article.post.ettan .entry-title {
+        width: 170px;
+    }
+}
+
+section.central {
+    margin-right: 1em;
+}
+
+.home.page {
+    [role='main'] section {
+        padding: 1.5em 1em 1em 1em;
+
+        border: solid 1px $borderColor;
+
+        & > h1 {
+            display: inline-block;
+            position: absolute;
+
+            padding: 0 0.2em;
+
+            margin-top: -2em;
+
+            background: #fff;
+            border: solid 1px $borderColor;
+
+            text-transform: uppercase;
+            color: $primaryColor;
+            font-size: 1.15em;
+        }
+    }
+
+    article {
+        border: none;
+    }
+
+    .ettan-site-name {
+        margin-top: 0;
+        margin-right: -14px;
+    }
 }
