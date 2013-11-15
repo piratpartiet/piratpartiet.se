@@ -321,6 +321,24 @@ class Piratpartiet {
 			return $wp_query->max_num_pages;
 		}
 	}
+
+    /**
+     * Returns the title to be shown above the content area
+     *
+     * @static
+     * @return string
+     * @since 1.1
+     */
+    public static function get_title() {
+        if (class_exists('PP_Ettan') && is_front_page()) {
+            return 'Just nu';
+        } elseif (class_exists('PP_ettan') && is_home())  {
+            return 'Nyhetsarkivet';
+        }
+
+        return get_bloginfo("name");
+    }
+
 }
 
 // Load the theme

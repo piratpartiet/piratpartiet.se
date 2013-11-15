@@ -49,9 +49,8 @@
 					<hgroup class="wide-column">
 						<a href="<?php bloginfo('rss2_url'); ?>" class="rss-icon"></a>
 						<h1>
-							<?php $justnu = class_exists('PP_Ettan') && ( is_front_page() || is_home() ) ?>
-							<a href="<?php bloginfo("url") ?>" rel="home" <?php if ( $justnu ) echo 'class="justnu"' ?>>
-								<?php echo $justnu ? 'Just nu' : get_bloginfo("name") ?>
+							<a href="<?php bloginfo("url") ?>" rel="home" <?php if ( $title ) echo 'class="justnu"' ?>>
+								<?php echo Piratpartiet::get_title() ?>
 							</a>
 						</h1>
 						<h2><?php bloginfo("description") ?></h2>
