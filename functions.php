@@ -3,6 +3,9 @@
  * Piratpartiet WordPress Theme
  * @version 1.1
  * @author Rickard Andersson <rickard@0x539.se>
+ *
+ * 1.0: Initial release
+ * 1.1: New front page with multiple streams
  */
 
 /**
@@ -121,7 +124,7 @@ class Piratpartiet {
 	}
 
 	/**
-	 * ATtached to the filter wp_trim_words
+	 * Attached to the filter wp_trim_words
 	 *
 	 * @param string $text
 	 * @param string $num_words
