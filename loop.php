@@ -52,8 +52,6 @@
 
 	<?php endwhile; ?>
 
-	<?php get_template_part( 'pager' ) ?>
-
 <?php elseif (is_search()) : ?>
 
     <article>
