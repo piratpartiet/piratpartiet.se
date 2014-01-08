@@ -2,11 +2,7 @@
 	while (have_posts()) : the_post() ?>
 		
 	<article role="article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <?php if ( has_post_thumbnail() ) : ?>
-            <figure class="alignleft">
-                <?php the_post_thumbnail('thumbnail') ?>
-            </figure>
-        <?php endif ?>
+
 
 		<header>
 
@@ -33,6 +29,13 @@
 
 		</header>
 		<div class="entry-content">
+
+            <?php if ( has_post_thumbnail() ) : ?>
+                <figure class="alignleft">
+                    <?php the_post_thumbnail('thumbnail') ?>
+                </figure>
+            <?php endif ?>
+
 			<?php if ( is_single() || is_page() ) : ?>
 				<?php the_content(); ?>
 			<?php else : ?>
